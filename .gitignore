@@ -1,0 +1,11 @@
+*~
+compile_commands.json
+dep/
+obj/
+
+
+bad_quadtree*
+ok_quadtree*
+arena_quadtree*
+realloc_danger*
+relative_demo*
