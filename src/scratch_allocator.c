@@ -37,7 +37,8 @@ arena_t* scratch_checkout(void)
 	}
 	scratch_t* res = available;
 	res->arena.size = 0;
-	available->next = unavailable;
+	available = res->next;
+	res->next = unavailable;
 	unavailable = res;
 	return (arena_t*)res;
 }
@@ -54,7 +55,8 @@ arena_t* scratch_checkout_size(const int32_t size)
 	}
 	scratch_t* res = available;
 	res->arena.size = 0;
-	available->next = unavailable;
+	available = res->next;
+	res->next = unavailable;
 	unavailable = res;
 	return (arena_t*)res;
 }
